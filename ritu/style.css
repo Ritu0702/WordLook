@@ -1,0 +1,272 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: sans-serif;
+    background-repeat: none;
+    background-image: linear-gradient(rgb(3, 36, 36), rgb(10, 80, 80));
+    
+}
+
+/*-------------------Nav Bar------------------*/
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(6, 96, 96);
+    color: white;
+    font-size: 28px;
+    height: 90px;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 1px 3px 3px 5px rgb(2, 38, 38);
+  
+}
+nav h1{
+    margin-left: 30px;
+}
+nav p{
+    margin-left: 125px;
+    font-size: 15px;
+}
+
+
+
+/*-------------------Main------------------*/
+
+main{
+    padding: 20px;
+    height: calc(100% - 90px);
+    display: flex;
+    gap: 20px;
+    
+}
+
+.container{
+    width: 40%;
+    padding: 22px;
+    background-color: #fff;
+    box-shadow: 1px 3px 3px 5px rgb(4, 53, 53);
+    border-radius: 6px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchBar{
+    display: flex;
+    width: 80%;
+    gap: 5px;
+    
+    
+}
+.container input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #e1e1e1;
+    font-size: 20px;
+    border-radius: 4px;
+    
+}
+.searchbtn{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.searchBar button{
+   
+    height: 100%;
+    background-color:  rgb(10, 83, 83);
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 20px;
+}
+
+.searchBar button:hover{
+    background-color: orange;
+}
+
+
+/*-----------------Loader--------------------*/
+
+.loader {
+    position: absolute;
+    left: 40px;
+    border: 20px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 21px solid rgb(10, 83, 83);
+    width: 20px;
+    height: 20px;
+    display: none;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+ 
+/*----------------------The text Div----------------------*/
+
+.text{
+    padding: 22px;
+    margin-top: 22px;
+}
+.text p{
+    margin-top: 18px;
+}
+.text a{
+    padding: 6px 20px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 16px;
+}
+.text span{
+    color: rgb(92, 91, 91);
+}
+
+/*-------------------Left and Rght content-----------------*/
+
+.left,.right{
+    background-color: #fff;
+    box-shadow: 1px 3px 3px 5px rgb(3, 44, 44);
+    width: 30%;
+    position: relative;
+    top: 43px;
+    height: 500px;
+    border-radius: 6px;
+    
+    
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    
+}
+.left .quote-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(179, 236, 236);
+    min-height: 50%;
+    height: auto;
+    border-radius: 10px;
+    padding: 30px;
+    color:  rgb(2, 30, 30);
+}
+
+.left .quote-box p{
+    margin-top: 20px;
+    align-self:flex-end;
+}
+
+.left button{
+    background-color: rgb(6, 96, 96);
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    padding:  15px;
+    margin-top: 20px;
+}
+
+.left button:hover{
+    background-color: orange;
+}
+
+.right{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.right .images{
+    height: 85%;
+    width: 95%;
+    margin-top: 20px;
+    position: relative;
+   
+}
+
+.images img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.right .leftright{
+    margin-top: 10px;
+}
+.leftright button{
+    border: none;
+    margin: 0px 20px;
+    background-color:  rgb(6, 96, 96);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+
+.leftright button:hover{
+    background-color: orange;
+}
+
+.leftright i{
+    font-size: 2rem;
+    color: white;
+    
+}
+
+
+/*----------------------Media Query-------------------------*/
+
+@media screen and (max-width:600px){
+
+    nav{
+        align-items: center;
+    }
+    main{
+        flex-direction: column;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+        height: 100%;
+    }
+    .searchBar{
+        flex-direction: column;
+    }
+}
+
